@@ -11,9 +11,7 @@ const NOTES: Note[] = [{
   id: 'about',
   title: 'About me',
   content: <div className="space-y-4" data-magicpath-id="0" data-magicpath-path="PersonalWebsite.tsx">
-        <p data-magicpath-id="1" data-magicpath-path="PersonalWebsite.tsx">
-          I'm the cofounder and CEO of Misogi Labs. We work with pharma and CROs to integrate AI agents in preclinical R&D and IP workflows. We believe that by freeing scientists from everything that isn't science and doesn't require human genius, we can significantly augment the pace of discoveries. For more, check our website or reach out to me at jessica (at) misogilabs (dot) com.
-        </p>
+        <p data-magicpath-id="1" data-magicpath-path="PersonalWebsite.tsx">I'm the cofounder and CEO of Misogi Labs. We work with pharma and CROs to integrate AI agents in preclinical R&D and IP workflows. We believe that by freeing scientists from everything that isn't science and doesn't require human genius, we can significantly augment the pace of discoveries. For more, check our website or reach out at jessica (at) misogilabs (dot) com.</p>
         <p data-magicpath-id="2" data-magicpath-path="PersonalWebsite.tsx">
           I went to university at Politecnico di Milano, where I earned my MSc in Bioengineering, and to University of Padova, where I earned my BSc in Biomedical Engineering. I graduated magna cum laude with highest honors and was awarded several prestigious prizes for scholarly achievements (ranked top 2 among all 7k master's students). During my studies I also had the opportunity and honor to be a Teaching Assistant in Analysis & PDE, Physics, and Biomechanics. I loved teaching and till my early 20s I thought I would continue my career in academia.
         </p>
@@ -103,7 +101,9 @@ export const PersonalWebsite = () => {
           duration: 0.15
         }} className="flex-1 overflow-y-auto" data-magicpath-id="31" data-magicpath-path="PersonalWebsite.tsx">
             <div className="max-w-2xl mx-auto px-8 py-12" data-magicpath-id="32" data-magicpath-path="PersonalWebsite.tsx">
-              <h2 className="text-2xl font-semibold mb-6" data-magicpath-id="33" data-magicpath-path="PersonalWebsite.tsx">{activeNote.title}</h2>
+              <h2 className="text-2xl font-semibold mb-6" data-magicpath-id="33" data-magicpath-path="PersonalWebsite.tsx" style={{
+              fontSize: "20px"
+            }}>{activeNote.title}</h2>
               <div className="text-gray-800 leading-relaxed" data-magicpath-id="34" data-magicpath-path="PersonalWebsite.tsx">{activeNote.content}</div>
             </div>
           </motion.div>
