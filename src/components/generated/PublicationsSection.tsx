@@ -24,7 +24,7 @@ export const PublicationsSection = () => {
         <li data-magicpath-id="9" data-magicpath-path="PublicationsSection.tsx">BSc thesis (Italian) [</li>
       </ul>
       <div className="mt-6" data-magicpath-id="10" data-magicpath-path="PublicationsSection.tsx">
-        <a href="https://scholar.google.com/citations?user=g5BOUx0AAAAJ&hl=it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors text-sm" data-magicpath-id="11" data-magicpath-path="PublicationsSection.tsx">
+        <a href="https://scholar.google.com/citations?user=g5BOUx0AAAAJ&hl=it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 transition-colors text-sm underline" data-magicpath-id="11" data-magicpath-path="PublicationsSection.tsx">
           Google Scholar
         </a>
       </div>
