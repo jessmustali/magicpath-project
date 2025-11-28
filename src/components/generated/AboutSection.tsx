@@ -8,15 +8,7 @@ export const AboutSection = () => {
         augment the pace of discoveries. For more, check our website or reach out at jessica (at)
         misogilabs (dot) com.
       </p>
-      <p data-magicpath-id="2" data-magicpath-path="AboutSection.tsx">
-        I went to university at Politecnico di Milano, where I earned my MSc in Bioengineering, and
-        to University of Padova, where I earned my BSc in Biomedical Engineering. I graduated magna
-        cum laude with highest honors and was awarded several prestigious prizes for scholarly
-        achievements (ranked top 2 among all 7k master's students). During my studies I also had
-        the opportunity and honor to be a Teaching Assistant in Analysis & PDE, Physics, and
-        Biomechanics. I loved teaching and till my early 20s I thought I would continue my career
-        in academia.
-      </p>
+      <p data-magicpath-id="2" data-magicpath-path="AboutSection.tsx">I went to university at Politecnico di Milano, where I earned my MSc in Bioengineering, and to University of Padova, where I earned my BSc in Biomedical Engineering. I graduated magna cum laude with highest honors and received several awards for academic achievements. During my studies I also had the opportunity and honor to be a Teaching Assistant in Analysis & PDE, Physics, and Biomechanics. I loved teaching and till my early 20s I thought I would continue my career in academia.</p>
       <p data-magicpath-id="3" data-magicpath-path="AboutSection.tsx">
         In my last year of BSc I started doing academic research in the lab. I worked on
         engineering CSP peptides to inhibit communication of bacterial quorum sensing and biofilm
