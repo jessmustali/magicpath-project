@@ -18,5 +18,10 @@ export const PublicationsSection = () => {
           BSc thesis (Italian) [
         </li>
       </ul>
+      <div className="mt-4" data-magicpath-id="8" data-magicpath-path="PublicationsSection.tsx">
+        <a href="https://scholar.google.com/citations?user=g5BOUx0AAAAJ&hl=it" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600" data-magicpath-id="9" data-magicpath-path="PublicationsSection.tsx">
+          Google Scholar
+        </a>
+      </div>
     </div>;
 };
