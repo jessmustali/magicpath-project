@@ -133,6 +133,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   html,
   body,
   #root {
@@ -141,6 +144,26 @@ body {
     margin: 0;
     padding: 0;
     overscroll-behavior-x: none;
+  }
+  
+  /* Hide scrollbars but keep functionality */
+  * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  *::-webkit-scrollbar-track {
+    display: none !important;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    display: none !important;
   }
 }
 

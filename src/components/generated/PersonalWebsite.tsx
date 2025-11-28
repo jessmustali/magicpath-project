@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AboutSection } from './AboutSection';
-import { AwardsSection } from './AwardsSection';
 import { PublicationsSection } from './PublicationsSection';
-import { BlogsSection } from './BlogsSection';
-import { MediaSection } from './MediaSection';
 import { NotesSection } from './NotesSection';
 type Note = {
   id: string;
@@ -18,21 +15,9 @@ const NOTES: Note[] = [{
   title: 'About me',
   content: <AboutSection />
 }, {
-  id: 'publications',
-  title: 'Publications',
+  id: 'publications & awards',
+  title: 'Publications & Awards',
   content: <PublicationsSection />
-}, {
-  id: 'awards',
-  title: 'Awards',
-  content: <AwardsSection />
-}, {
-  id: 'blogs',
-  title: 'Blogs',
-  content: <BlogsSection />
-}, {
-  id: 'media',
-  title: 'Media',
-  content: <MediaSection />
 }, {
   id: 'notes',
   title: 'Notes and projects',
@@ -62,22 +47,23 @@ export const PersonalWebsite = () => {
   };
 
   // @return
-  return <div className="flex h-screen w-full bg-white overflow-hidden font-sans text-gray-900">
-      {/* Sidebar */}
-      <div className="w-40 border-r border-gray-100 flex flex-col">
-        <div className="px-4 py-5">
-          <h1 className="text-sm font-normal text-gray-900">Jessica Mustali</h1>
+  return <div className="flex h-screen w-full bg-white overflow-hidden font-sans text-gray-900 justify-center">
+      <div className="flex h-full max-w-6xl">
+        {/* Sidebar */}
+        <div className="w-40 flex flex-col">
+          <div className="px-4 pt-20 pb-5">
+            <h1 className="text-sm font-normal text-gray-900">Jessica Mustali</h1>
+          </div>
+
+          <div className="flex-1 overflow-y-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {NOTES.map(note => <button key={note.id} onClick={() => setActiveNoteId(note.id)} className={`w-full text-left px-4 py-2 text-xs hover:text-gray-900 transition-colors ${activeNoteId === note.id ? 'text-gray-900' : 'text-gray-400'}`}>
+                {note.title}
+              </button>)}
+          </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto">
-          {NOTES.map(note => <button key={note.id} onClick={() => setActiveNoteId(note.id)} className={`w-full text-left px-4 py-2 text-xs hover:bg-gray-50 transition-colors ${activeNoteId === note.id ? 'text-gray-900' : 'text-gray-400'}`}>
-              {note.title}
-            </button>)}
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col bg-white h-full overflow-hidden">
+        {/* Main Content */}
+        <div className="flex-1 flex flex-col bg-white h-full overflow-hidden ml-24">
         <AnimatePresence mode="wait">
           <motion.div key={activeNote.id} initial={{
           opacity: 0
@@ -87,11 +73,11 @@ export const PersonalWebsite = () => {
           opacity: 0
         }} transition={{
           duration: 0.12
-        }} className="flex-1 overflow-y-auto">
-            <div className="max-w-xl mx-auto px-6 py-8">
+        }} className="flex-1 overflow-y-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="max-w-[40rem] pl-6 pr-6 pt-20 pb-8">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xs font-medium text-gray-400 uppercase tracking-wide">
-                  {activeNote.title}
+                  {activeNote.id === 'publications & awards' ? 'Publications' : activeNote.title}
                 </h2>
                 {activeNote.id === 'about' && <div className="flex items-center gap-4 text-xs">
                     <a href="https://www.linkedin.com/in/jessica-mustali/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 underline transition-colors">
@@ -101,7 +87,7 @@ export const PersonalWebsite = () => {
                       X
                     </a>
                   </div>}
-                {activeNote.id === 'publications' && <div className="text-xs">
+                {activeNote.id === 'publications & awards' && <div className="text-xs">
                     <a href="https://scholar.google.com/citations?user=g5BOUx0AAAAJ&hl=it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900 underline transition-colors">
                       Google Scholar
                     </a>
@@ -113,6 +99,7 @@ export const PersonalWebsite = () => {
             </div>
           </motion.div>
         </AnimatePresence>
+      </div>
       </div>
     </div>;
 };
