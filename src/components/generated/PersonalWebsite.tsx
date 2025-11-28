@@ -49,9 +49,9 @@ export const PersonalWebsite = () => {
     if (activeNote.id === 'about') {
       return <>
           {activeNote.content}
-          <div className="mt-8 pt-8 border-t border-gray-200 space-y-2" data-magicpath-id="6" data-magicpath-path="PersonalWebsite.tsx">
+          <div className="mt-12 pt-6 space-y-1" data-magicpath-id="6" data-magicpath-path="PersonalWebsite.tsx">
             {NOTES.filter(n => n.id !== 'about').map(note => <div key={note.id} data-magicpath-id="7" data-magicpath-path="PersonalWebsite.tsx">
-                <button onClick={() => setActiveNoteId(note.id)} className="text-gray-800 underline hover:text-gray-600 transition-colors text-left" data-magicpath-id="8" data-magicpath-path="PersonalWebsite.tsx">
+                <button onClick={() => setActiveNoteId(note.id)} className="text-gray-500 hover:text-gray-900 transition-colors text-left text-sm" data-magicpath-id="8" data-magicpath-path="PersonalWebsite.tsx">
                   {note.title}
                 </button>
               </div>)}
@@ -64,13 +64,13 @@ export const PersonalWebsite = () => {
   // @return
   return <div className="flex h-screen w-full bg-white overflow-hidden font-sans text-gray-900" data-magicpath-id="9" data-magicpath-path="PersonalWebsite.tsx">
       {/* Sidebar */}
-      <div className="w-48 border-r border-gray-200 flex flex-col" data-magicpath-id="10" data-magicpath-path="PersonalWebsite.tsx">
-        <div className="p-4 border-b border-gray-200" data-magicpath-id="11" data-magicpath-path="PersonalWebsite.tsx">
-          <h1 className="text-lg font-semibold" data-magicpath-id="12" data-magicpath-path="PersonalWebsite.tsx">Jessica Mustali</h1>
+      <div className="w-40 border-r border-gray-100 flex flex-col" data-magicpath-id="10" data-magicpath-path="PersonalWebsite.tsx">
+        <div className="px-4 py-5" data-magicpath-id="11" data-magicpath-path="PersonalWebsite.tsx">
+          <h1 className="text-sm font-normal text-gray-900" data-magicpath-id="12" data-magicpath-path="PersonalWebsite.tsx">Jessica Mustali</h1>
         </div>
 
         <div className="flex-1 overflow-y-auto" data-magicpath-id="13" data-magicpath-path="PersonalWebsite.tsx">
-          {NOTES.map(note => <button key={note.id} onClick={() => setActiveNoteId(note.id)} className={`w-full text-left px-4 py-3 text-sm border-b border-gray-100 hover:bg-gray-50 transition-colors ${activeNoteId === note.id ? 'bg-gray-50' : ''}`} data-magicpath-id="14" data-magicpath-path="PersonalWebsite.tsx">
+          {NOTES.map(note => <button key={note.id} onClick={() => setActiveNoteId(note.id)} className={`w-full text-left px-4 py-2 text-xs hover:bg-gray-50 transition-colors ${activeNoteId === note.id ? 'text-gray-900' : 'text-gray-400'}`} data-magicpath-id="14" data-magicpath-path="PersonalWebsite.tsx">
               {note.title}
             </button>)}
         </div>
@@ -86,16 +86,15 @@ export const PersonalWebsite = () => {
         }} exit={{
           opacity: 0
         }} transition={{
-          duration: 0.15
+          duration: 0.12
         }} className="flex-1 overflow-y-auto" data-magicpath-id="17" data-magicpath-path="PersonalWebsite.tsx">
-            <div className="max-w-2xl mx-auto px-8 py-12" data-magicpath-id="18" data-magicpath-path="PersonalWebsite.tsx">
-              <h2 className="text-2xl font-semibold mb-6" style={{
-              fontWeight: "700",
-              fontSize: "16px"
-            }} data-magicpath-id="19" data-magicpath-path="PersonalWebsite.tsx">
+            <div className="max-w-xl mx-auto px-6 py-8" data-magicpath-id="18" data-magicpath-path="PersonalWebsite.tsx">
+              <h2 className="text-xs font-medium mb-6 text-gray-400 uppercase tracking-wide" data-magicpath-id="19" data-magicpath-path="PersonalWebsite.tsx">
                 {activeNote.title}
               </h2>
-              <div className="text-gray-800 leading-relaxed" data-magicpath-id="20" data-magicpath-path="PersonalWebsite.tsx">{renderContent()}</div>
+              <div className="text-gray-700 leading-relaxed text-sm" data-magicpath-id="20" data-magicpath-path="PersonalWebsite.tsx">
+                {renderContent()}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
