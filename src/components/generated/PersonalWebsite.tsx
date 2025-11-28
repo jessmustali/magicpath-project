@@ -119,7 +119,8 @@ export const PersonalWebsite = () => {
         }} className="flex-1 overflow-y-auto" data-magicpath-id="34" data-magicpath-path="PersonalWebsite.tsx">
             <div className="max-w-2xl mx-auto px-8 py-12" data-magicpath-id="35" data-magicpath-path="PersonalWebsite.tsx">
               <h2 className="text-2xl font-semibold mb-6" style={{
-              fontSize: "20px"
+              fontWeight: "700",
+              fontSize: "16px"
             }} data-magicpath-id="36" data-magicpath-path="PersonalWebsite.tsx">{activeNote.title}</h2>
               <div className="text-gray-800 leading-relaxed" data-magicpath-id="37" data-magicpath-path="PersonalWebsite.tsx">{renderContent()}</div>
             </div>
