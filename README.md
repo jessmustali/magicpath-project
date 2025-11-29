@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+https://www.jessicamustali.com/
+
+# Designed with MagicPth + Cursor
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
