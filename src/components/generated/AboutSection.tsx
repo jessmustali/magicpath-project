@@ -3,9 +3,9 @@ export const AboutSection = () => {
   return <div className="space-y-3">
       <p>
         I'm the cofounder and CEO of <a href="https://www.misogilabs.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-500 transition-colors">Misogi Labs</a>. We work with pharma and CROs to integrate AI
-        agents in preclinical R&D and IP workflows. We believe that by freeing scientists from
-        everything that isn't science and doesn't require human genius, we can significantly
-        augment the pace of discoveries. For more, check out our website or reach out at jessica (at)
+        agents in preclinical R&D and IP workflows. By freeing scientists and IP professionals from
+        repetitive tasks and automating complex workflows with biochemistry-aware AI, we give them their time back 
+        to focus on driving transformative discoveries. For more, check out our website or reach out at jessica (at)
         misogilabs (dot) com.
       </p>
       <p>I went to university at Politecnico di Milano, where I earned my MSc in Bioengineering, 

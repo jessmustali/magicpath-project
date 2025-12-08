@@ -26,7 +26,7 @@ export const NotesSection = () => {
         </button>
       </p>
       <p>
-        Putting down here some of the notes from my times in university. Before the next Thanksgiving.
+        Putting down here some of the notes from my times in university...before the next Thanksgiving.
       </p>
     </div>;
 };
